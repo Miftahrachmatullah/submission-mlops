@@ -13,9 +13,8 @@ parser.add_argument("--n_estimators", type=int, default=100)
 parser.add_argument("--max_depth", type=int, default=10)
 args = parser.parse_args()
 
-dagshub.init(repo_owner=os.environ.get("DAGSHUB_USERNAME"), 
-             repo_name=os.environ.get("DAGSHUB_REPO_NAME"), 
-             mlflow=True)
+dagshub.init(repo_owner="Miftahrachmatullah", 
+            repo_name="submission-mlops", mlflow=True)
 
 print("Loading data")
 df = pd.read_csv("data_clean.csv")
